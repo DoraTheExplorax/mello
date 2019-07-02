@@ -1,0 +1,31 @@
+body{
+    background-color: #4285f4;
+    font-family: 'ProductSans';
+}
+
+.mdc-card {
+    height: 80%;
+    border-radius: 20px;
+    margin: auto;
+    padding: 25px;
+    overflow: hidden;
+    margin-top: 15.5%;
+}
+
+.mdc-text-field{
+    margin: 5px;
+}
+
+.font {
+    font-family: 'ProductSans';
+}
+.mdc-button{
+    margin-top: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@font-face {
+    font-family: 'ProductSans';
+    src: url("css/fonts/productsans.ttf");
+    }
