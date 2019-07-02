@@ -27,5 +27,30 @@ body{
 
 @font-face {
     font-family: 'ProductSans';
-    src: url("css/fonts/productsans.ttf");
+    src: url("fonts/productsans.ttf");
     }
+
+.text-center {
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'ProductSansBold';
+    src: url("fonts/productsans_bold.ttf");
+    }
+
+.font-bold {
+    font-family: 'ProductSansBold';
+}
+
+.primary-light {
+    color: #80b4ff;
+}
+
+.primary-dark {
+    color: #0059c1;
+}
+
+.primary {
+    color: #4285f4;
+}
