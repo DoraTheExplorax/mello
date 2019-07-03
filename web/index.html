@@ -16,6 +16,26 @@
 
     <!-- Custom CSS -->
     <link href="css/main.css" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="js/index.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script>
+        var GoogleAuth; // Google Auth object.
+    function initClient() {
+      gapi.client.init({
+          'apiKey': 'AIzaSyB-ALTO-kNLyHhTXNOaYLTRVAfCtPDnHzY',
+          'clientId': '928650230487-lb9nn1ikni5po1k7gqeak15ovatqi4j4.apps.googleusercontent.com',
+          'scope': 'https://mail.google.com/',
+          'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest']
+      }).then(function () {
+          GoogleAuth = gapi.auth2.getAuthInstance();
+    
+          // Listen for sign-in state changes.
+          GoogleAuth.isSignedIn.listen(updateSigninStatus);
+      });
+    }</script>
+
 </head>
 <body>
     <div class="container">
@@ -25,7 +45,7 @@
             <h2 class="font-bold text-center">Sign Up</h2>
         <div class="mdc-text-field">
             <input type="text" id="name" class="mdc-text-field__input">
-            <label class="mdc-floating-label" for="my-text-field">Name</label>
+            <label class="mdc-floating-label" id="x">Name</label>
             <div class="mdc-line-ripple"></div>
           </div>
           <div class="mdc-text-field">
@@ -39,7 +59,7 @@
             <div class="mdc-line-ripple"></div>
           </div>
 
-          <button class="mdc-button mdc-button--raised">
+          <button onclick="initClient()" class="mdc-button mdc-button--raised">
                 <span class="mdc-button__label">Sign up</span>
               </button>
         </div>
