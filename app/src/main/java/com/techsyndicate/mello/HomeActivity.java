@@ -2,7 +2,12 @@ package com.techsyndicate.mello;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+
+import com.google.firebase.auth.FirebaseAuth;
+
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -11,4 +16,11 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
     }
+
+    public void signOut(View view) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(HomeActivity.this,MainActivity.class));
+    }
+
+
 }
